@@ -10,7 +10,9 @@ let meta = 0
 let myelocyte = 0
 let other = 0 
 let pmn = 0
+let nrbc = 0
 
+// next time use array object . this is a lot of work . 
 let otherNumber = document.getElementById("other")
 let myeloNumber = document.getElementById("myelocyte")
 let metaNumber = document.getElementById("metamyelocyte")
@@ -23,6 +25,7 @@ let bandNumber = document.getElementById("band")
 let pmnNumber = document.getElementById("neutraphil")
 let totalNumber = document.getElementById("total")
 let alertWarning = document.getElementById("alertStop")
+let nrbcNumber = document.getElementById("nrbc")
 function hundredCount(){
 
 }
@@ -136,6 +139,15 @@ function addOther(){
     }
 }
 
+function addNrbc(){
+    if(total >= 100){
+        alertCount()
+    }else{
+        nrbc +=1
+        nrbcNumber.textContent = nrbc
+    }
+}
+
 function reset(){
    total = 0
     band = 0
@@ -148,6 +160,7 @@ function reset(){
     myelocyte = 0
     other = 0 
     pmn = 0
+    nrbc = 0
 
     pmnNumber.textContent = pmn
     totalNumber.textContent = total
@@ -160,6 +173,7 @@ function reset(){
     metaNumber.textContent = meta
     myeloNumber.textContent = myelocyte
     otherNumber.textContent = other
+    nrbcNumber.textContent = nrbc
 
     alertWarning.textContent = ""
 }
@@ -176,3 +190,60 @@ function alertCount(){
     alertWarning.textContent = "100 cells have been counted"
     
 }
+
+document.addEventListener('keydown', (event)=> {    
+    console.log(event); // all event related info
+    console.log(event.type);
+    console.log(event.key);
+    console.log(event.code);
+
+    switch(event.key){
+        case "m":
+        case "M":
+            addPmn()
+            break;
+        case "n":
+        case "N":
+            addBand()
+            break;
+        case "b":
+        case "B":
+            addLymph()
+            break;
+        case "v":
+        case "V":
+            addMono()
+            break;
+        case "c":
+        case "C":
+            addEos()
+            break;
+        case "x":
+        case "X":
+            addBaso()
+            break;
+        case "d":
+        case "D":
+            addAtypical()
+            break;
+        case "f":
+        case "F":
+            addMyelo()
+            break;
+        case "g":
+        case "G":
+            addMeta()
+            break;
+        case "/":
+        case "?":
+            addOther()
+            break;
+        case "l":
+        case "L":
+            addNrbc()
+            break;
+        
+        
+
+    }
+});

@@ -12,6 +12,9 @@ let other = 0
 let pmn = 0
 let nrbc = 0
 
+keyupColor = "red"
+keydownColor ="grey"
+
 // next time use array object . this is a lot of work . 
 let otherNumber = document.getElementById("other")
 let myeloNumber = document.getElementById("myelocyte")
@@ -26,13 +29,28 @@ let pmnNumber = document.getElementById("neutraphil")
 let totalNumber = document.getElementById("total")
 let alertWarning = document.getElementById("alertStop")
 let nrbcNumber = document.getElementById("nrbc")
+
+let nrbcBtn = document.getElementById("nrbc-btn") 
+let otherBtn = document.getElementById("other-btn") 
+let myelocyteBtn = document.getElementById("myelocyte-btn") 
+let metamyelocyteBtn = document.getElementById("metamyelocyte-btn") 
+let atypicalBtn = document.getElementById("atypical-btn") 
+let basophilBtn = document.getElementById("basophil-btn") 
+let eosinophilBtn = document.getElementById("eosinophil-btn") 
+let monocyteBtn = document.getElementById("monocyte-btn") 
+let lymphocyteBtn = document.getElementById("lymphocyte-btn") 
+let bandBtn = document.getElementById("band-btn") 
+let neutraphilBtn = document.getElementById("neutraphil-btn") 
+
+
 function hundredCount(){
 
 }
 function addPmn(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         pmn += 1
         total += 1
         totalNumber.textContent = total
@@ -43,9 +61,10 @@ function addPmn(){
 }
 
 function addBand(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         band += 1
         total += 1
         totalNumber.textContent = total
@@ -54,9 +73,10 @@ function addBand(){
 }
 
 function addLymph(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         lymph += 1
         total += 1
         totalNumber.textContent = total
@@ -65,9 +85,10 @@ function addLymph(){
 }
 
 function addMono(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         mono += 1
         total += 1
         totalNumber.textContent = total
@@ -76,9 +97,10 @@ function addMono(){
 }
 
 function addEos(){
-    if(total >= 100){
+    if(total >99 ){
         alertCount()
     }else{
+        playClick()
         eos += 1
         total += 1
         totalNumber.textContent = total
@@ -88,9 +110,10 @@ function addEos(){
 }
 
 function addBaso(){
-    if(total >= 100){
+    if(total > 99 ){
         alertCount()
     }else{
+        playClick()
         baso += 1
         total += 1
         totalNumber.textContent = total
@@ -99,9 +122,10 @@ function addBaso(){
 }
 
 function addAtypical(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         atypical += 1
         total += 1
         totalNumber.textContent = total
@@ -109,9 +133,10 @@ function addAtypical(){
     }
 }
 function addMeta(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         meta +=1
         total += 1
         totalNumber.textContent = total
@@ -119,9 +144,10 @@ function addMeta(){
     }
 }
 function addMyelo(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         myelocyte += 1
         total += 1
         totalNumber.textContent = total
@@ -129,9 +155,10 @@ function addMyelo(){
     }
 }
 function addOther(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()
         other +=1
         total += 1
         totalNumber.textContent = total
@@ -140,9 +167,10 @@ function addOther(){
 }
 
 function addNrbc(){
-    if(total >= 100){
+    if(total > 99){
         alertCount()
     }else{
+        playClick()        
         nrbc +=1
         nrbcNumber.textContent = nrbc
     }
@@ -183,6 +211,11 @@ function playSound(){
     audio.loop = false
     audio.play()
 }
+function playClick(){
+    let audio = new Audio("click.mp3")
+    audio.loop = false
+    audio.play()
+}
 
 function alertCount(){
     
@@ -200,47 +233,135 @@ document.addEventListener('keydown', (event)=> {
     switch(event.key){
         case "m":
         case "M":
+            document.getElementById("neutraphil-btn").style.background=keydownColor;
+
             addPmn()
+            
             break;
         case "n":
         case "N":
+            document.getElementById("band-btn").style.background=keydownColor;
+
             addBand()
             break;
         case "b":
         case "B":
+            document.getElementById("lymphocyte-btn").style.background=keydownColor;
+
             addLymph()
             break;
         case "v":
         case "V":
+            document.getElementById("monocyte-btn").style.background=keydownColor;
+
             addMono()
             break;
         case "c":
         case "C":
+            document.getElementById("eosinophil-btn").style.background=keydownColor;
+
             addEos()
             break;
         case "x":
         case "X":
+            document.getElementById("basophil-btn").style.background=keydownColor;
+
             addBaso()
-            break;
-        case "d":
-        case "D":
-            addAtypical()
             break;
         case "f":
         case "F":
+            document.getElementById("atypical-btn").style.background=keydownColor;
+
+            addAtypical()
+            break;
+        case "h":
+        case "H":
+            
+            document.getElementById("myelocyte-btn").style.background=keydownColor;
             addMyelo()
             break;
         case "g":
         case "G":
             addMeta()
+            document.getElementById("metamyelocyte-btn").style.background=keydownColor;
+
             break;
         case "/":
         case "?":
             addOther()
+            document.getElementById("other-btn").style.background=keydownColor;
+
             break;
         case "l":
         case "L":
             addNrbc()
+            document.getElementById("nrbc-btn").style.background=keydownColor;
+
+            break;
+        
+        
+
+    }
+});
+
+document.addEventListener('keyup', (event)=> { 
+    switch(event.key){
+        case "m":
+        case "M":
+            document.getElementById("neutraphil-btn").style.background=keyupColor;
+
+            
+            break;
+        case "n":
+        case "N":
+            document.getElementById("band-btn").style.background=keyupColor;
+
+            break;
+        case "b":
+        case "B":
+            document.getElementById("lymphocyte-btn").style.background=keyupColor;
+
+            break;
+        case "v":
+        case "V":
+            document.getElementById("monocyte-btn").style.background=keyupColor;
+
+            break;
+        case "c":
+        case "C":
+            document.getElementById("eosinophil-btn").style.background=keyupColor;
+
+            break;
+        case "x":
+        case "X":
+            document.getElementById("basophil-btn").style.background=keyupColor;
+
+            break;
+        case "f":
+        case "F":
+            document.getElementById("atypical-btn").style.background=keyupColor;
+
+            break;
+        case "h":
+        case "H":
+            document.getElementById("myelocyte-btn").style.background=keyupColor;
+
+            break;
+        case "g":
+        case "G":
+            document.getElementById("metamyelocyte-btn").style.background=keyupColor;
+
+            break;
+        case "/":
+        case "?":
+            document.getElementById("other-btn").style.background=keyupColor;
+
+            break;
+        case "l":
+        case "L":
+        
+            document.getElementById("nrbc-btn").style.background=keyupColor;
+
             break;
         
         

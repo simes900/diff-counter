@@ -6,58 +6,64 @@
         
     </head>
     <body>
-        <h1>Count the white cells!</h1>
-        <p>Total: <span id="total">0 </span></p>
+        <h1>Cell Differential Counter</h1>
+        <p>*Please maximize screen / No mobile compatibility. Version: 0.1 . Release Date:9/17/21 . By: Simon Kuang*</p>
+        <a href="https://en.wikipedia.org/wiki/White_blood_cell_differential">White blood cell differential</a>
+        <p id="totalLetter">Total : </p><p id="total">0 </p>
         <button id="reset" onClick="reset()">Reset</button>
         
         <div class="column">
             <div class="sub-column">
                 <p id="nrbc">0</p>
-                <button onClick="addNrbc">NRBC<br>L</button>
+                <button id="nrbc-btn"onClick="addNrbc">NRBC<span>L</span></button>
             </div>
             <div class="sub-column">
                 <p id="other">0</p>
-                <button onClick="addOther()">Other<br>/</button>
-            </div>
-            <div class="sub-column">
-                <p id="myelocyte">0</p>
-                <button onClick="addMyelo()">Myelocyte<br>F</button>
-            </div>
-            <div class="sub-column">
-                <p id="metamyelocyte">0</p>
-                <button onClick="addMeta()">Metamyelocyte<br>G</button>
+                <button id="other-btn" onClick="addOther()">Other<span>/</span></button>
             </div>
             <div class="sub-column">
                 <p id="atypical">0</p>
-                <button onClick="addAtypical()">Atypical Lymphocyte<br>D</button>
+            
+                <button id="atypical-btn" onClick="addAtypical()">Atypical<span>F</span></button>
+            </div>
+            <div class="sub-column">
+                <p id="metamyelocyte">0</p>
+                <button id="metamyelocyte-btn" onClick="addMeta()">Meta <span>G</span></button>
+            </div>
+            <div class="sub-column">
+                <p id="myelocyte">0</p>
+          
+                <button id="myelocyte-btn" onClick="addMyelo()">Myelocyte <span>G</span></button>
             </div>
             <div class="sub-column">
                 <p id="basophil">0</p>
-                <button onClick="addBaso()">Basophil<br>X</button>
+                <button id="basophil-btn" onClick="addBaso()">Basophil <span>X</span></button>
             </div>
             <div class="sub-column">
                 <p id="eosinophil">0</p>
-                <button onClick="addEos()">Eosinophil<br>C</button>
+                <button id="eosinophil-btn" onClick="addEos()">Eosinophil <span>C</span></button>
             </div>
             <div class="sub-column">
                 <p id="monocyte">0</p>
-                <button onClick="addMono()">Monocyte<br>V</button>
+                <button id="monocyte-btn" onClick="addMono()">Monocyte <span>V</span></button>
             </div>
             <div class="sub-column">
                 <p id="lymphocyte">0</p>
-                <button onClick="addLymph()">Lymphocyte<br>B</button>
+                <button id="lymphocyte-btn" onClick="addLymph()">Lymphocyte <span>B</span></button>
             </div>
             <div class="sub-column">
                 <p id="band">0</p>
-                <button onClick="addBand()">Band<br>N</button>
+                <button id="band-btn" onClick="addBand()">Band <span>N</span></button>
             </div>
             <div class="sub-column">
                 <p id="neutraphil">0</p>
-                <button onClick="addPmn()">Neutraphil <br>M</button>
+                <button id="neutraphil-btn" onClick="addPmn()">Neutraphil <span>M</span></button>
             </div>
         </div>
 
         <p id="alertStop"></p>
+
         <script src="index.js"></script>
+
     </body>
 </html>

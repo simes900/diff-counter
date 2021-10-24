@@ -177,33 +177,36 @@ function addNrbc(){
 }
 
 function reset(){
-   total = 0
-    band = 0
-    lymph = 0
-    mono = 0
-    eos = 0
-    baso = 0
-    atypical = 0
-    meta = 0
-    myelocyte = 0
-    other = 0 
-    pmn = 0
-    nrbc = 0
-
-    pmnNumber.textContent = pmn
-    totalNumber.textContent = total
-    bandNumber.textContent = band
-    lymphNumber.textContent = lymph
-    monoNumber.textContent = mono
-    eosNumber.textContent = eos
-    basophilNumber.textContent = baso
-    atypicalNumber.textContent = atypical
-    metaNumber.textContent = meta
-    myeloNumber.textContent = myelocyte
-    otherNumber.textContent = other
-    nrbcNumber.textContent = nrbc
-
-    alertWarning.textContent = ""
+    if(confirm("Do you want to reset?")){
+        total = 0
+        band = 0
+        lymph = 0
+        mono = 0
+        eos = 0
+        baso = 0
+        atypical = 0
+        meta = 0
+        myelocyte = 0
+        other = 0 
+        pmn = 0
+        nrbc = 0
+    
+        pmnNumber.textContent = pmn
+        totalNumber.textContent = total
+        bandNumber.textContent = band
+        lymphNumber.textContent = lymph
+        monoNumber.textContent = mono
+        eosNumber.textContent = eos
+        basophilNumber.textContent = baso
+        atypicalNumber.textContent = atypical
+        metaNumber.textContent = meta
+        myeloNumber.textContent = myelocyte
+        otherNumber.textContent = other
+        nrbcNumber.textContent = nrbc
+    
+        alertWarning.textContent = ""
+    }
+   
 }
 
 function playSound(){

@@ -91,83 +91,8 @@ button{
     background: rgb(119, 116, 116);
 }
 
-@media only screen and (max-width:1180px){
-    .pmn{
-        order: 1;
-       
-    }
-    .band{
-        order: 2;
-    }
-    .lymph{
-        order: 3;
-    }
-    .mono{
-        order: 4;
-    }
-    .eos{
-        order: 5;
-    }
-    .baso{
-        order: 6;
-    }
-    .meta{
-        order: 7;
-    }
-    .myelo{
-        order: 8;
-    }
-    .atypical{
-        order: 9;
-    }
-    .nrbc{
-        order: 10;
-    }
-    .other{
-        order: 11;
-    }
-    /*span{
-        display: none;
-    }*/
-    #total{
-        display:inline-block;
-    }
 
-    .sub-column{
-        display:flex;
-        margin-bottom: 1rem;
-    }
-    .right{
-        order:2;
-       
-    }
-    .left{
-        order:1;
-        
-    }
-
-    button{
-        width:75%;
-    }
-    .container .sub-column p{
-        width: 25%;
-        font-weight: bold;
-        letter-spacing: 0.1rem;
-    }
-    .column 
-    {
-        padding: 1rem;
-    }
-    .line-break{
-        display:none;
-    }
-    h1{
-        padding-top:1rem;
-    }
-   
-}
-
-@media screen and (min-width: 1180px) and (max-width:1330px){
+@media screen and (min-width: 896px) and (max-width:1330px){
     #total{
         display: inline-block;
         margin-top: 2rem;
@@ -316,6 +241,82 @@ button{
         width: 10em;
         margin-bottom: 1rem;
     }
+}
+
+@media only screen and (max-width:896px){
+    .pmn{
+        order: 1;
+       
+    }
+    .band{
+        order: 2;
+    }
+    .lymph{
+        order: 3;
+    }
+    .mono{
+        order: 4;
+    }
+    .eos{
+        order: 5;
+    }
+    .baso{
+        order: 6;
+    }
+    .meta{
+        order: 7;
+    }
+    .myelo{
+        order: 8;
+    }
+    .atypical{
+        order: 9;
+    }
+    .nrbc{
+        order: 10;
+    }
+    .other{
+        order: 11;
+    }
+    /*span{
+        display: none;
+    }*/
+    #total{
+        display:inline-block;
+    }
+
+    .sub-column{
+        display:flex;
+        margin-bottom: 1rem;
+    }
+    .right{
+        order:2;
+       
+    }
+    .left{
+        order:1;
+        
+    }
+
+    button{
+        width:75%;
+    }
+    .container .sub-column p{
+        width: 25%;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+    }
+    .column 
+    {
+        padding: 1rem;
+    }
+    .line-break{
+        display:none;
+    }
+    h1{
+        padding: 1rem;
+    }
+   
 }
 
 /*
